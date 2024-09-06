@@ -1,0 +1,75 @@
+﻿<Page x:Class="_06._09._2024_Smirnov_Andreew_wpf_sqlite.Pages.Glav"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_06._09._2024_Smirnov_Andreew_wpf_sqlite.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="900"
+      Title="Glav">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+          FontFamily="Deutsch Ghotic" Text="Список пользователей" HorizontalAlignment="Center" FontSize="24" Background="White">
+        </TextBlock>
+        <StackPanel HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1"
+                   VerticalAlignment="Top"  Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <DataGrid Name="dtgUsers" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"
+                     Binding="{Binding Id}" Width="80"/>
+                    <DataGridTextColumn Header="Name"
+                     Binding="{Binding Name}" Width="300"/>
+                    <DataGridTextColumn Header="Age"
+                     Binding="{Binding Age}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <Button Grid.Column="3"
+        Grid.Row="1"
+        Name="btnCreateUsers"
+        Width="200"
+        Height="45"
+        Content="Добавить"
+        FontSize="24"
+        Click="btnCreateUsers_Click"
+        FontFamily="Deutsch Ghotic" VerticalAlignment="Top"/>
+                <Button Grid.Column="3"
+                Grid.Row="1"
+                Name="btnDeleteUsers"
+                Width="200"
+                Height="45"
+                Content="Удалить"
+                FontSize="24"
+                Click="btnDeleteUsers_Click"
+                FontFamily="Deutsch Ghotic" VerticalAlignment="Center"/>
+        <Button Grid.Column="3"
+        Grid.Row="1"
+        Name="btnRedactUsers"
+        Width="200"
+        Height="45"
+        Content="Редактировать"
+        FontSize="24"
+        Click="btnRedactUsers_Click"
+        FontFamily="Deutsch Ghotic" VerticalAlignment="Bottom"/>    
+       <TextBox Grid.Row="2" Grid.Column="3"
+        Name="txtBoxCountOfUsers"
+        FontSize="24"
+        Width="120"
+        Height="60"
+        TextAlignment="Center"/>
+    </Grid>
+</Page>

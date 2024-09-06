@@ -1,0 +1,30 @@
+﻿<Window x:Class="_06._09._2024_Smirnov_Andreew_wpf_sqlite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_06._09._2024_Smirnov_Andreew_wpf_sqlite"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="900">
+    <Window.Background>
+        <ImageBrush ImageSource="https://img.alicdn.com/imgextra/i1/6000000004223/O1CN01o1a5iV1h4BAF2iaYO_!!6000000004223-0-tbvideo.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Row="0" Grid.Column="0" NavigationUIVisibility="Hidden"
+               Name="FrmMain" Grid.ColumnSpan="5" Grid.RowSpan="5"/>
+    </Grid>
+</Window>
